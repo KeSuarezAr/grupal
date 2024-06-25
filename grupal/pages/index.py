@@ -3,7 +3,10 @@ import reflex as rx
 from grupal.components.sidebar import build_sidebar
 
 
-@rx.page("/")
+@rx.page(
+    route="/",
+    title="Inicio",
+)
 def index_page() -> rx.Component:
     border_width = 3
 
