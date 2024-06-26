@@ -30,7 +30,6 @@ class UsuariosState(rx.State):
 def usuarios_page() -> rx.Component:
     return rx.container(
         rx.color_mode.button(position="top-right"),
-        rx.button(rx.icon("refresh-ccw"), on_click=UsuariosState.get_data),
         rx.flex(
             rx.heading(
                 "Usuarios Administradores",

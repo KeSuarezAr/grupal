@@ -1,6 +1,7 @@
 import reflex as rx
 
 from grupal.models.usuarios import UsuarioModel
+from grupal.views.editar_usuario import dialog_editar_usuario
 
 
 def tabla_usuarios(usuarios: list[UsuarioModel]) -> rx.Component:
@@ -31,12 +32,7 @@ def row_table(usuario: UsuarioModel) -> rx.Component:
         rx.table.cell(usuario.direccion),
         rx.table.cell(
             rx.hstack(
-                rx.button(
-                    "Editar",
-                    on_click=rx.redirect(
-                        f"/editar_usuario/{usuario.id}/",
-                    ),
-                ),
+                dialog_editar_usuario(usuario),
                 rx.button("Eliminar"),
             )
         ),

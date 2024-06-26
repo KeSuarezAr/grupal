@@ -1,8 +1,6 @@
 import reflex as rx
 
-from grupal.models.usuarios import UsuarioModel
-
-from grupal.connection.usuarios import insert_usuario, select_user, update_usuario
+from grupal.connection.usuarios import insert_usuario
 
 
 class AddFormState(rx.State):
@@ -52,6 +50,5 @@ def agregar_usuario_page() -> rx.Component:
                 rx.button("Cancelar"),
             ),
             on_submit=AddFormState.handle_submit,
-            reset_on_submit=True,
         ),
     )

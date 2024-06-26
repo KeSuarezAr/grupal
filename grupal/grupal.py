@@ -4,7 +4,6 @@ from rxconfig import config
 
 from grupal.pages.index import index_page
 from grupal.pages.usuarios import usuarios_page
-from grupal.pages.editar_usuario import editar_usuario_page
 from grupal.pages.agregar_usuario import agregar_usuario_page
 
 
@@ -17,5 +16,4 @@ class State(rx.State):
 app = rx.App()
 app.add_page(component=index_page)
 app.add_page(component=usuarios_page)
-app.add_page(component=editar_usuario_page)
 app.add_page(component=agregar_usuario_page)
