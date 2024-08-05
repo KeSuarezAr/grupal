@@ -5,7 +5,7 @@ from sqlmodel import select
 from grupal.models.user import UserModel
 
 
-def login_user(login_form: dict):
+def login_user(login_form: dict) -> tuple[UserModel, str] | None:
     email = login_form["email"]
     password = login_form["password"].encode("utf-8")
 
@@ -15,9 +15,9 @@ def login_user(login_form: dict):
         ).first()
 
         if user and checkpw(password, user.password.encode("utf-8")):
-            return True
+            return user
 
-    return False
+    return None
 
 
 def register_user(register_form: dict):

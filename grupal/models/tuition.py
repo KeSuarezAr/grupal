@@ -6,7 +6,7 @@ from sqlmodel import Field, Relationship
 
 
 class TuitionModel(rx.Model, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
+    id: Optional[int] = Field(primary_key=True)
     date: datetime
     cod: str
     precio: float

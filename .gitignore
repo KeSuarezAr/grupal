@@ -3,3 +3,6 @@
 .venv
 .web
 __pycache__/
+assets/external/
+alembic.ini
+reflex.db
