@@ -9,6 +9,12 @@ text_style = Style({
     "flex": "1"
 })
 
+search_box_style = Style({
+    "display": "flex",
+    "justify-content": "center",
+    "margin-top": "2em"
+})
+
 image_style = Style({
     "width": "50%",
     "height": "auto",
@@ -56,14 +62,4 @@ login_button_style = Style({
     "top": "1em",
     "left": "1em",
     "cursor": "pointer"
-})
-
-index_page_style = Style({
-    "width": "100%",
-    # "height": "100vh",
-    "height": "100%",
-    "background": "#003366",
-    "display": "flex",
-    "flex-direction": "column",
-    "align-items": "center"
 })

@@ -1,13 +1,14 @@
 import reflex as rx
 
 from grupal.models.course import CourseModel
+from grupal.states.models.course import CourseState
 from grupal.styles.index_styles import curso_card_style
 
 
-def courses_list(courses: list[CourseModel]) -> rx.Component:
+def courses_list() -> rx.Component:
     return rx.box(
         rx.foreach(
-            courses,
+            CourseState.courses,
             course_card
         ),
     )
