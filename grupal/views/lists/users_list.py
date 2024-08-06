@@ -6,6 +6,10 @@ from grupal.states.models.user import UserState
 
 
 def users_table(users: list[UserModel]) -> rx.Component:
+    # return rx.data_table(
+    #     data=users,
+    #     columns=["Nombre", "Correo", "Rol", "Informacion"],
+    # )
     return rx.table.root(
         rx.table.header(
             rx.table.row(

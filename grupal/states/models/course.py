@@ -16,6 +16,11 @@ class CourseState(rx.State):
             query = select(CourseModel)
             self.courses = list(session.exec(query).all())
 
+    def get_course_by_id(self, course_id: int):
+        with rx.session() as session:
+            query = select(CourseModel).where(CourseModel.id == course_id)
+            return session.exec(query).first()
+
     def delete_course(self, course_id: int):
         with rx.session() as session:
             course = session.exec(CourseModel.select().where(CourseModel.id == course_id)).first()

@@ -14,7 +14,7 @@ from grupal.views.lists.courses_list import courses_list
     route="/",
     title="Inicio",
 )
-def index_page() -> rx.Component:
+def courses_page() -> rx.Component:
     def header_box():
         return rx.box(
             rx.hstack(
