@@ -5,7 +5,7 @@ import sqlmodel
 
 
 class PersonModel(rx.Model, table=True):
-    id: Optional[int] = sqlmodel.Field(default=None, primary_key=True)
+    id: Optional[int] = sqlmodel.Field(primary_key=True)
 
     first_name: str
     last_name: str

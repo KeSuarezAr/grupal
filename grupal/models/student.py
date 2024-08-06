@@ -5,7 +5,7 @@ import sqlmodel
 
 
 class StudentModel(rx.Model, table=True):
-    id: Optional[int] = sqlmodel.Field(default=None, primary_key=True)
+    id: Optional[int] = sqlmodel.Field(primary_key=True)
     user_id: Optional[int] = sqlmodel.Field(foreign_key="usermodel.id")
     user: Optional["UserModel"] = sqlmodel.Relationship(back_populates="student")
     tuition: Optional["TuitionModel"] = sqlmodel.Relationship(back_populates="student")

@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 reflex==0.5.1
+=======
+reflex==0.5.8
+sqlmodel~=0.0.21
+bcrypt~=4.2.0
+SQLAlchemy~=2.0.31
+>>>>>>> ea4f401b7d1f0e7cf76442bee88e6b4d0eda792e

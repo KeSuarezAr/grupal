@@ -5,7 +5,7 @@ from .login import login_page
     route="/",
     title="Inicio",
 )
-def index_page() -> rx.Component:
+def index_pages() -> rx.Component:
     cursos = [
         {"nombre": "Curso 1", "paralelo": "Paralelo A"},
         {"nombre": "Curso 2", "paralelo": "Paralelo B"},
@@ -92,4 +92,4 @@ def index_page() -> rx.Component:
 
 # Código adicional para iniciar la aplicación Reflex
 if __name__ == "__main__":
-    rx.run(index_page)
+    rx.run(index_pages)
