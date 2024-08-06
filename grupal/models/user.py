@@ -1,7 +1,5 @@
 from typing import Optional
 
-import sqlalchemy
-import sqlmodel
 from reflex import Model
 from sqlmodel import Field, Relationship
 

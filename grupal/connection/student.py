@@ -5,7 +5,7 @@ from grupal.models.user import UserModel
 
 
 def insert_student_user(user: dict):
-    user = UserModel(username=user["username"], email=user["email"], password=user["password"], role="student")
+    user = StudentModel(username=user["username"], email=user["email"], password=user["password"], role="student")
     with rx.session() as session:
         session.add(user)
         session.commit()
