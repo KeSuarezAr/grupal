@@ -25,7 +25,8 @@ def dashboard_page() -> rx.Component:
         {"title": "2do A", "description": "Traer plastilina"},
         {"title": "3ro B", "description": "Dibujar las plantas"},
         {"title": "4to C", "description": "Traer algo para compartir"},
-        {"title": "5to A", "description": "Resolver los ejercicios de matemáticas"},    ]
+        {"title": "5to A", "description": "Resolver los ejercicios de matemáticas"},    ],
+    
     
     def content_card(item):
         return rx.box(
