@@ -1,13 +1,10 @@
-from sqlmodel import create_engine
-from sqlalchemy import Engine
+from sqlmodel import create_engine, SQLModel
 
-
-def create_database_engine(
-    user: str = "root",
-    password: str = "",
-    host: str = "localhost",
-    port: int = 3306,
-    database: str = "grupal_interfaces",
-) -> Engine:
-    url = f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
-    return create_engine(url)
+def connect():
+    usuario = "root"
+    clave = ""
+    host: "locals"
+    puerto = 3306
+    engine = create_engine(f"mysql+pymysql://{usuario}:{clave}@localhost:3306/academica")
+    SQLModel.metadata.create_all(engine)
+    return engine

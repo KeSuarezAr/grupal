@@ -1,19 +1,18 @@
-import reflex as rx
+from reflex import App
 
-from rxconfig import config
+from .pages.index import index_pages
+from .pages.login import login_page
+from .pages.dashboard_padres import dashboard_page
+from grupal.pages.student_page import student_page
+from grupal.pages.user_list_page import users_page
+from grupal.pages.asignaciones_list_page import asignments_page
 
-from grupal.pages.index import index_page
-from grupal.pages.usuarios import usuarios_page
-from grupal.pages.agregar_usuario import agregar_usuario_page
+app = App()
 
-
-class State(rx.State):
-    """The app state."""
-
-    ...
-
-
-app = rx.App()
-app.add_page(component=index_page)
-app.add_page(component=usuarios_page)
-app.add_page(component=agregar_usuario_page)
+app.add_page(index_pages)
+app.add_page(users_page)
+app.add_page(login_page)
+app.add_page(users_page)
+app.add_page(student_page)
+app.add_page(asignments_page)
+app.add_page(dashboard_page)
