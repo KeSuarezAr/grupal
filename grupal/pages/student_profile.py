@@ -55,7 +55,6 @@ def box_style() -> rx.Style:
 
 def profile_style() -> rx.Style:
     return rx.Style(
-        padding="10",
         background_color="#222",
         border_radius="10px",
         box_shadow="0px 0px 10px 0px rgba(0,0,0,0.75)",

@@ -1,5 +1,6 @@
 import reflex as rx
 
+
 @rx.page(
     route="/dashboard",
     title="Dashboard",
@@ -11,7 +12,7 @@ def dashboard_page() -> rx.Component:
         {"label": "Calificaciones", "active": True},
         {"label": "Actividades", "active": True},
     ]
-    
+
     def sidebar_item(item):
         return rx.box(
             rx.text(item["label"], font_size="1.2em", color="white", padding="1em"),
@@ -20,13 +21,13 @@ def dashboard_page() -> rx.Component:
             margin_bottom="1em",
             cursor="pointer",
         )
-    
+
     content_items = [
         {"title": "2do A", "description": "Traer plastilina"},
         {"title": "3ro B", "description": "Dibujar las plantas"},
         {"title": "4to C", "description": "Traer algo para compartir"},
-        {"title": "5to A", "description": "Resolver los ejercicios de matemáticas"},    ]
-    
+        {"title": "5to A", "description": "Resolver los ejercicios de matemáticas"}, ]
+
     def content_card(item):
         return rx.box(
             rx.text(item["title"], font_size="1.2em", color="white", text_align="center"),
@@ -46,8 +47,8 @@ def dashboard_page() -> rx.Component:
             # min_width="150px",
             # min_height="150px",
         )
-    
-    return rx.box(
+
+    return rx.container(
         rx.box(
             *[sidebar_item(item) for item in sidebar_items],
             width="20%",
@@ -69,6 +70,7 @@ def dashboard_page() -> rx.Component:
         height="100vh",
         background="linear-gradient(to bottom right, navy, red)",
     )
+
 
 # Código adicional para iniciar la aplicación Reflex
 if __name__ == "__main__":

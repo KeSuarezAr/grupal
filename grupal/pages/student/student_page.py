@@ -1,6 +1,6 @@
 import reflex as rx
 
-from grupal.views.student_profile import student_profile
+from grupal.pages.student_profile import student_profile
 
 
 @rx.page(
@@ -16,5 +16,4 @@ def student_page() -> rx.Component:
         gap="1rem",
         align="center",
         justify="center",
-
     )

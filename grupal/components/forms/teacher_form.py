@@ -86,5 +86,4 @@ def teacher_form() -> rx.Component:
         reset_on_submit=True,
         justify="center",
         align="center",
-
     )
