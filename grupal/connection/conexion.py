@@ -1,5 +1,6 @@
 from sqlmodel import create_engine, SQLModel
 
+
 def connect():
     usuario = "root"
     clave = ""

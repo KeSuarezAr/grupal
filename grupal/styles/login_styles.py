@@ -1,42 +1,56 @@
 from reflex import Style
 
-form_item_style = Style({
-    "margin-bottom": "1em",
-    "padding": "0.5em",
-    "border-radius": "0.3em"
-})
+login_page_style = Style(
+    height="100vh",
+    background_image="linear-gradient(to bottom right, navy, red)",
+)
 
-text_style = Style({
-    "font-size": "3em",
-    "font-weight": "bold",
-    "color": "white",
-    "text-align": "center",
-    "font-family": "'Helvetica Neue', Arial, sans-serif",
-    "flex": "1"
-})
+login_card_style = Style(
+    size="4",
+    max_width="28em",
+    width="100%",
+    background_image="linear-gradient(to bottom right, navy, red)",
+    padding="2em",
+    border_radius="0.5em",
+    box_shadow="0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+)
 
-box_style = Style({
-    "width": "100%",
-    "align-items": "center",
-    "justify-content": "space-between"
-})
+login_body_style = Style(
+    width="100%",
+)
 
-form_style = Style({
-    "justify": "center",
-    "align": "center",
-    "height": "100%",
-    "width": "70%",
-    "margin": "auto",
-    "display": "flex",
-    "flex-direction": "column",
-    "align-items": "center"
-})
+login_header_style = Style(
+    width="100%"
+)
 
-login_page_style = Style({
-    "width": "100%",
-    "height": "100%",
-    "background": "#003366",
-    "display": "flex",
-    "flex-direction": "column",
-    "align-items": "center"
-})
+login_heading_style = Style(
+    size="6",
+    as_="h2",
+    text_align="center",
+    width="100%",
+)
+
+login_image_style = Style(
+    width="8em",
+    height="auto",
+    border_radius="30px 50px",
+    border="5px solid #555"
+)
+
+login_input_container_style = Style(
+    justify="start",
+    width="100%",
+)
+
+login_input_label_style = Style(
+    text_align="left",
+    width="100%",
+)
+
+login_input_style = Style(
+    width="100%",
+)
+
+signin_button_style = Style(
+    opacity="0.8",
+)

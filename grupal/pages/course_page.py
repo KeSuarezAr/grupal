@@ -1,17 +1,14 @@
 import reflex as rx
 
-from grupal.states.models.course import CourseState
-
 from grupal.styles.index_styles import *
 from grupal.styles.styles import page_style
-
-from grupal.views.forms.course_form import course_dialogue
-from grupal.views.lists.courses_list import courses_list
+from grupal.components.forms.course_form import course_dialogue
+from grupal.components.lists.courses_list import courses_list
 
 
 @rx.page(
-    route="/",
-    title="Inicio",
+    route="/course",
+    title="Cursos",
 )
 def courses_page() -> rx.Component:
     def header_box():

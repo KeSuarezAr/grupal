@@ -1,8 +1,8 @@
 import reflex as rx
 
 from grupal.states.models.trimester import TrimesterState
-from grupal.views.forms.trimester_form import trimester_dialogue
-from grupal.views.lists.trimesters_list import trimesters_table
+from grupal.components.forms.trimester_form import trimester_dialogue
+from grupal.components.lists.trimesters_list import trimesters_table
 
 
 @rx.page(

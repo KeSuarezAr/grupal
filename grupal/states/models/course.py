@@ -1,8 +1,6 @@
 from typing import List
 
 import reflex as rx
-import sqlalchemy
-
 from sqlmodel import select
 
 from grupal.models.course import CourseModel
@@ -16,7 +14,8 @@ class CourseState(rx.State):
             query = select(CourseModel)
             self.courses = list(session.exec(query).all())
 
-    def get_course_by_id(self, course_id: int):
+    @staticmethod
+    def get_course_by_id(course_id: int):
         with rx.session() as session:
             query = select(CourseModel).where(CourseModel.id == course_id)
             return session.exec(query).first()

@@ -1,7 +1,7 @@
 import reflex as rx
 
 from grupal.states.models.assignment import AssignmentState
-from grupal.views.lists.assignments_list import asignaciones_table
+from grupal.components.lists.assignments_list import asignaciones_table
 
 
 @rx.page(
@@ -10,7 +10,7 @@ from grupal.views.lists.assignments_list import asignaciones_table
     title="Asignaciones",
 )
 def asignments_page() -> rx.Component:
-    return rx.flex(
+    return rx.container(
         rx.color_mode.button(position="top-right"),
         rx.heading("Asignaciones", size="5"),
         rx.flex(

@@ -1,7 +1,7 @@
 from typing import Optional
 
 from reflex import Model
-from sqlmodel import Field, Relationship
+from sqlmodel import Field
 
 
 class CourseModel(Model, table=True):

@@ -1,8 +1,8 @@
-import sqlmodel
-import reflex as rx
-
+from datetime import datetime
 from typing import Optional
-from datetime import datetime, UTC
+
+import reflex as rx
+import sqlmodel
 
 
 class ContributionModel(rx.Model, table=True):
@@ -12,5 +12,4 @@ class ContributionModel(rx.Model, table=True):
     fecha_modificacion: datetime = sqlmodel.Field(default_factory=datetime.utcnow)
     tipo: str
 
-
-from grupal.models.assignment import AssignmentModel
+# from grupal.models.assignment import AssignmentModel

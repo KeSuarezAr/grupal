@@ -1,10 +1,9 @@
+from datetime import datetime
+from typing import Optional
+
 import reflex as rx
 import sqlalchemy
 import sqlmodel
-from typing import Optional
-from datetime import datetime
-
-from sqlmodel import Field
 
 
 class AssignmentModel(rx.Model, table=True):

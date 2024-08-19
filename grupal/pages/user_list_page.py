@@ -1,11 +1,11 @@
 import reflex as rx
 
 from grupal.states.models.user import UserState
-from grupal.views.forms.admin_form import admin_dialogue
-from grupal.views.forms.parent_form import parent_dialogue
-from grupal.views.forms.teacher_form import teacher_dialogue
-from grupal.views.forms.student_form import student_dialogue
-from grupal.views.lists.users_list import users_table
+from grupal.components.forms.admin_form import admin_dialogue
+from grupal.components.forms.parent_form import parent_dialogue
+from grupal.components.forms.student_form import student_dialogue
+from grupal.components.forms.teacher_form import teacher_dialogue
+from grupal.components.lists.users_list import users_table
 
 
 # def select_role() -> rx.Component:

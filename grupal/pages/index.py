@@ -1,11 +1,11 @@
 import reflex as rx
-from .login import login_page
+
 
 @rx.page(
     route="/",
     title="Inicio",
 )
-def index_pages() -> rx.Component:
+def index_page() -> rx.Component:
     cursos = [
         {"nombre": "Curso 1", "paralelo": "Paralelo A"},
         {"nombre": "Curso 2", "paralelo": "Paralelo B"},
@@ -56,7 +56,7 @@ def index_pages() -> rx.Component:
             box_shadow="0 4px 8px rgba(0, 0, 0, 0.15)"
         ),
         rx.box(
-            rx.input(placeholder="Buscar cursos y paralelos", width="80%", padding="0.5em", margin_right="1em"),
+            rx.input(placeholder="Buscar Estudiantes", width="80%", padding="0.5em", margin_right="1em"),
             rx.button("Buscar", color="#2B2B2B", background_color="white", border_radius="0.3em", padding="0.5em 1em"),
             display="flex",
             justify_content="center",
@@ -89,7 +89,3 @@ def index_pages() -> rx.Component:
         flex_direction="column",
         align_items="center"
     )
-
-# Código adicional para iniciar la aplicación Reflex
-if __name__ == "__main__":
-    rx.run(index_pages)
