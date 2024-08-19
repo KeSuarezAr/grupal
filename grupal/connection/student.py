@@ -1,11 +1,16 @@
 import reflex as rx
 
 from grupal.models.student import StudentModel
-from grupal.models.user import UserModel
 
 
 def insert_student_user(user: dict):
-    user = StudentModel(username=user["username"], email=user["email"], password=user["password"], role="student")
+    user = StudentModel(
+        username=user["username"],
+        email=user["email"],
+        password=user["password"],
+        # role="student"
+    )
+
     with rx.session() as session:
         session.add(user)
         session.commit()
